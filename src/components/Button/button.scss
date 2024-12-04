@@ -1,0 +1,30 @@
+@import "../../scss/utils/variables.scss";
+@import "../../scss/utils/mixins.scss";
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    :hover{
+        transform: scale(103%);
+    }
+}
+.button{
+    border: 3px solid white;
+    border-radius: 20px;
+    background-color: map-get($map: $colors, $key:couleurPrimaire );
+    @include boxShadow();
+    :hover{
+        cursor: pointer;
+    }
+    &__text{
+        padding: 1.25rem 4rem;
+        color: white;
+        font-size: 24px;
+        @include tablette{
+            font-size: 20px;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+}

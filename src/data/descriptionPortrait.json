@@ -1,0 +1,27 @@
+[
+    {
+        "id":"Romain ALBRECHT",
+        "title" : "Hypno-Coach certifié NGH",
+        "content": "Pendant plus de 20 ans, que ce soit comme Enseignant, Chef d’établissement ou Mentor, j’ai toujours placé l’Humain au centre de mon parcours professionnel. Aujourd’hui, je vous accompagne, en toute sérénité, dans la voie du changement, de la libération de votre potentiel pour vous permettre d’accomplir Votre Légende Personnelle… ",
+        "domains":"Adolescents – Décrochage, phobie scolaire et sociale – Accompagnement au changement – Coaching professionnel – Coaching de Vie",
+        "selfie" : "/src/assets/images/romainPhoto.png",
+        "alt" : "Profil Romain Albrecht",
+        "logo": "/src/assets/logo/Logo_NGH.png",
+        "altLogo":"logo NGH",
+        "linkedin": "/src/assets/logo/LinkedIn_logo_initials.png.webp",
+        "altLogo2":"logo linkedin"
+        
+    },
+    {
+        "id":"Agnès MICHAUD ",
+        "title" : "Sophrologue certifiée RNCP",
+        "content": "Je vous aide à (re)prendre le pouvoir et à cheminer vers Votre « Conquête Personnelle ». Investie pendant près de 15 ans dans le conseil, la formation des personnes dans leurs parcours personnels comme professionnels, dans l’accompagnement des chefs d’entreprises, des porteurs de projets et des salariés, j’ai enrichi ma pratique en y intégrant l’expérimentation du Vécu. Ma volonté : contribuer à faire émerger, grandir et entretenir vos ressources internes pour que vous puissiez libérer Votre potentiel et Vous accomplir pleinement…",
+        "domains":" Sommeil – Gestion des peurs – Accompagnement au changement – Senior – Coaching création d’entreprise – Coaching installation thérapeutes.",
+        "selfie" : "/src/assets/images/ouvrard-agnes.jpg",
+        "alt" : "Profil Agnès Michaud",
+        "logo": "/src/assets/logo/Logo sophrologie titre RNCP 3.png",
+        "altLogo":"logo sophrologie titre RNCP 3",
+        "linkedin": "/src/assets/logo/LinkedIn_logo_initials.png.webp",
+        "altLogo2":"logo linkedin"
+    }
+]

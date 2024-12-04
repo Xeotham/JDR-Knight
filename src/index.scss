@@ -1,0 +1,45 @@
+@import "../src/scss/utils/variables.scss";
+
+* {
+    // reset
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+
+    &>*{
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+body{
+    background-color: map-get($map:$colors , $key:couleurSecondaire );
+}
+
+* {
+    font-family: 'Monserrat', Arial, Helvetica, sans-serif;
+}
+
+.prestage {
+    font-family: 'Fjalla One', Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.aref {
+    font-family: 'Aref ruqaa', sans-serif, arial;
+}
+
+.gras {
+    font-weight: bolder;
+}
+
+.underline
+{
+    text-decoration: underline;
+}

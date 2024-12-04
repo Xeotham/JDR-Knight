@@ -1,0 +1,13 @@
+ @import '../../scss/utils/mixins.scss';
+
+ .mentionsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    &__title{
+        @include textTitle();
+    }
+    &__content{
+        font-size: x-large;
+    }
+ }

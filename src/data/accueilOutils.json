@@ -1,0 +1,20 @@
+[
+    {
+        "title":"Sophrologie",
+        "content":"La sophrologie est une pratique qui se vit. Elle s’expérimente à votre rythme en fonction de vos besoins.Elle se ressent dans le corps et dans l’esprit. C’est ce vécu qui vous permet de mobiliser vos propres ressources internes pour réaliser votre objectif.",
+        "picture":"/src/assets/images/sophrologie.jpg",
+        "alt":"Sophrologie"
+    },
+    {
+        "title":"Coaching",
+        "content":"Le coaching, c’est avant tout poser des questions. C’est ce questionnement ciblé qui vous offre une perspective tournée vers l’avenir. Avec lui, quelle que soit la destination professionnelle ou personnelle recherchée, vous découvrirez et ferez émerger vos propres solutions à mettre en place.",
+        "picture":"/src/assets/images/Coaching bandeau.jpg",
+        "alt":"Coaching"
+    },
+    {
+        "title":"Hypnose",
+        "content":"Ne vous êtes-vous jamais retrouvé absorbé dans un bon livre à ne rien entendre autour de vous ? Ou bien plongé dans vos pensées…puis « revenir à vous » ? Alors vous avez expérimenté l’état hypnotique auquel chacun d’entre-nous accède naturellement plusieurs fois par jour.",
+        "picture":"/src/assets/images/Hypnose bandeau.jpg",
+        "alt":"Hypnose"
+    }
+]

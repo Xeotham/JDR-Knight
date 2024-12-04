@@ -1,0 +1,46 @@
+@import "../../scss/utils/variables.scss";
+@import "../../scss/utils/mixins.scss";
+
+.bannerRotated {
+    background-color: map-get($map: $colors, $key: couleurPrimaire);
+    height: 8rem;
+    border-top: 3px solid map-get($map: $colors, $key: couleurTertiaire);
+    border-bottom: 3px solid #FBD447;
+    rotate: 3deg;
+    width: 120%;
+    margin-left: -5rem;
+
+    @include mobile{
+        width: 130%;
+        margin-left: -3rem;
+    }
+
+    @include tablette {
+        width: 130%;
+        margin-left: -3.5rem;
+    }
+
+
+    &__container {
+        rotate: -3deg;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        background: linear-gradient(90deg, #462523 , #cb9b51 , #f6e27a , #f6f2c0 , #f6e27a , #cb9b51 , #462523  );
+        @include goldendegradas;
+
+        &__title {
+            margin: 0 auto 0;
+            font-size: 5rem;
+
+            @include tablette {
+                font-size: 3.5rem;
+            }
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+    }
+
+}

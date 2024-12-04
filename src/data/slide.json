@@ -1,0 +1,67 @@
+[
+    {
+        "titleslide" : "Performance",
+        "picture": "/src/assets/images/Performance.jpg",
+        "alt" : "Homme d'affaire"
+    },
+    {
+        "titleslide" : "Peurs et Phobies",
+        "picture": "/src/assets/images/Peurs et Phobies.jpg",
+        "alt" : "Mygales phobies"
+    },
+    {
+        "titleslide" : "Préparer un évènement",
+        "picture": "/src/assets/images/Accompagnement au changement.jpg",
+        "alt" : "changement de voie"
+    },
+    {
+        "titleslide" : "Traumatismes",
+        "picture": "/src/assets/images/Traumatisme.jpg",
+        "alt" : "Traumatismes"
+    },
+    {
+        "titleslide" : "Sommeil",
+        "picture": "/src/assets/images/Sommeil.jpg",
+        "alt" : "Personne endormie"
+    },
+    {
+        "titleslide" : "Gestion du stress",
+        "picture": "/src/assets/images/Bien être.jpg",
+        "alt" : "Grenouille détendu"
+    },
+    {
+        "titleslide" : "Addictions - Severage",
+        "picture": "/src/assets/images/Addictions severage.jpg",
+        "alt" : "Libéré d'addictions"
+    },
+    {
+        "titleslide" : "Bien-Être et Émotions",
+        "picture": "/src/assets/images/Gestion des émotions.jpg",
+        "alt" : "Emojis émotions"
+    },
+    {
+        "titleslide" : "Douleurs",
+        "picture": "/src/assets/images/Douleur.jpg",
+        "alt" : "Ballon flottant sourire"
+    },
+    {
+        "titleslide" : "Création d'entreprise",
+        "picture": "/src/assets/images/Création d'entreprise.jpeg",
+        "alt" : "Bureau travail création d'entreprise"
+    },
+    {
+        "titleslide" : "HPI / HPE",
+        "picture": "/src/assets/images/HPI HPE.jpeg",
+        "alt" : "Bureau travail"
+    },
+    {
+        "titleslide" : "Décrochage / phobies scolaire et sociale",
+        "picture": "/src/assets/images/Phobies scolaire et sociale.jpeg",
+        "alt" : "Jeune cacher"
+    },
+    {
+        "titleslide" : "Troubles dys",
+        "picture": "/src/assets/images/Troubles dys.jpeg",
+        "alt" : "Troubles dys"
+    }
+]

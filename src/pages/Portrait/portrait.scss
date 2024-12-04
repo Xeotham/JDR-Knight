@@ -1,0 +1,49 @@
+@import "../../scss/utils/variables.scss";
+@import "../../scss/utils/mixins.scss";
+
+.portraitBanner{
+    rotate: 30deg;
+}
+.presentation{
+    margin: -3rem 3rem 0;
+    color: map-get($map:$colors , $key:couleurPrimaire );
+    font-size: x-large;
+    text-align: justify;
+    &__praticiens{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        margin: 3rem 0 3rem;
+    }
+    @include mobile {
+        margin: -3rem 1rem 0;
+    }
+}
+
+.approche{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    color: map-get($map:$colors , $key:couleurPrimaire );
+    font-size: x-large;
+    text-align: justify;
+    margin-bottom: 3rem;
+    &__texte{
+        margin: 0 3rem 3rem;
+        @include mobile {
+            margin: 0 1rem 3rem;
+        }
+        &__link{
+            text-decoration: underline;
+        }
+    }
+    
+    &__text{
+        margin: 3rem 3rem;
+        color: map-get($map:$colors , $key:couleurPrimaire );
+        font-size: x-large;
+        @include mobile {
+            margin: 2rem 1rem 2rem;
+        }
+    }
+}
