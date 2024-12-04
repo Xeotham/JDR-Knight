@@ -1,67 +1,67 @@
 [
     {
         "titleslide" : "Performance",
-        "picture": "/src/assets/images/Performance.jpg",
+        "picture": "",
         "alt" : "Homme d'affaire"
     },
     {
         "titleslide" : "Peurs et Phobies",
-        "picture": "/src/assets/images/Peurs et Phobies.jpg",
+        "picture": "",
         "alt" : "Mygales phobies"
     },
     {
         "titleslide" : "Préparer un évènement",
-        "picture": "/src/assets/images/Accompagnement au changement.jpg",
+        "picture": "",
         "alt" : "changement de voie"
     },
     {
         "titleslide" : "Traumatismes",
-        "picture": "/src/assets/images/Traumatisme.jpg",
+        "picture": "",
         "alt" : "Traumatismes"
     },
     {
         "titleslide" : "Sommeil",
-        "picture": "/src/assets/images/Sommeil.jpg",
+        "picture": "",
         "alt" : "Personne endormie"
     },
     {
         "titleslide" : "Gestion du stress",
-        "picture": "/src/assets/images/Bien être.jpg",
+        "picture": "",
         "alt" : "Grenouille détendu"
     },
     {
         "titleslide" : "Addictions - Severage",
-        "picture": "/src/assets/images/Addictions severage.jpg",
+        "picture": "",
         "alt" : "Libéré d'addictions"
     },
     {
         "titleslide" : "Bien-Être et Émotions",
-        "picture": "/src/assets/images/Gestion des émotions.jpg",
+        "picture": "",
         "alt" : "Emojis émotions"
     },
     {
         "titleslide" : "Douleurs",
-        "picture": "/src/assets/images/Douleur.jpg",
+        "picture": "",
         "alt" : "Ballon flottant sourire"
     },
     {
         "titleslide" : "Création d'entreprise",
-        "picture": "/src/assets/images/Création d'entreprise.jpeg",
+        "picture": "",
         "alt" : "Bureau travail création d'entreprise"
     },
     {
         "titleslide" : "HPI / HPE",
-        "picture": "/src/assets/images/HPI HPE.jpeg",
+        "picture": "",
         "alt" : "Bureau travail"
     },
     {
         "titleslide" : "Décrochage / phobies scolaire et sociale",
-        "picture": "/src/assets/images/Phobies scolaire et sociale.jpeg",
+        "picture": "",
         "alt" : "Jeune cacher"
     },
     {
         "titleslide" : "Troubles dys",
-        "picture": "/src/assets/images/Troubles dys.jpeg",
+        "picture": "",
         "alt" : "Troubles dys"
     }
 ]

@@ -9,7 +9,7 @@ export default function WorkCardReversed({ data }) {
                     <img className="workCardReversed__pictures__selfie" src={data.selfie} alt={data.alt} />
                     <div className="workCardReversed__pictures__container">
                         <img className="workCardReversed__pictures__container__logo" src={data.logo} alt={data.altLogo} />
-                        <a href="https://www.linkedin.com/in/michaud-agn%C3%A8s/" target="_blank"><img className="workCard__pictures__container__linkedin" src={data.linkedin} alt={data.altLogo2} /></a>
+                        <a href="" target="_blank"><img className="w" src={data.linkedin} alt={data.altLogo2} /></a>
                     </div>
                 </div>
                 <div className="workCardReversed__description">
