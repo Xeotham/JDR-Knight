@@ -5,6 +5,8 @@ const userRoutes = require("./routes/user");
 const pjRoutes = require('./routes/pj');
 const gearRoutes = require('./routes/gears');
 const path = require('path');
+const { LocalStorage } = require("node-localstorage");
+const localStorage = new LocalStorage("./scratch")
 require('dotenv').config();
 
 // DEPRECATION WARNINGS
@@ -100,13 +102,13 @@ function displayPJs(pjs){
     .join("");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (TOKEN)
-    {
-      fetchGears();
-      fetchPJs();
-    }
-    else{
-      alert("veuillez vous connecter !");
-    }
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   if (TOKEN)
+//     {
+//       fetchGears();
+//       fetchPJs();
+//     }
+//     else{
+//       alert("veuillez vous connecter !");
+//     }
+// });
