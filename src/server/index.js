@@ -16,10 +16,13 @@ const fastify_1 = __importDefault(require("fastify"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const cors_1 = __importDefault(require("@fastify/cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const path_1 = __importDefault(require("path"));
+const static_1 = __importDefault(require("@fastify/static"));
 const characterRoutes_1 = __importDefault(require("../routes/characterRoutes"));
 const armorRoutes_1 = __importDefault(require("../routes/armorRoutes"));
 const moduleRoutes_1 = __importDefault(require("../routes/moduleRoutes"));
 const weaponRoutes_1 = __importDefault(require("../routes/weaponRoutes"));
+const modulesRoutes_1 = __importDefault(require("../external-api/modulesRoutes"));
 dotenv_1.default.config();
 const server = (0, fastify_1.default)({ logger: true });
 // Connect to MongoDB
@@ -31,10 +34,16 @@ server.register(cors_1.default, {
     origin: '*', // Allow all origins (update for production)
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 });
+// Register fastify-static to serve static files
+server.register(static_1.default, {
+    root: path_1.default.join(process.cwd(), 'public'), // Path to the directory containing your static files
+    prefix: '/', // Serve files under the root URL
+});
 // Root route
 server.get('/', (request, reply) => __awaiter(void 0, void 0, void 0, function* () {
-    return { message: 'Knight TTRPG Backend' };
+    return reply.sendFile('index.html');
 }));
+server.register(modulesRoutes_1.default, { prefix: '/external-api' });
 server.register(characterRoutes_1.default, { prefix: '/api' });
 server.register(weaponRoutes_1.default, { prefix: '/api' });
 server.register(armorRoutes_1.default, { prefix: '/api' });

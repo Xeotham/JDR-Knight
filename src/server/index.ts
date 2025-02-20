@@ -2,11 +2,14 @@ import fastify from 'fastify';
 import mongoose from 'mongoose';
 import cors from '@fastify/cors';
 import dotenv from 'dotenv';
+import path	from 'path';
+import fastifyStatic from '@fastify/static';
 
 import characterRoutes from "../routes/characterRoutes";
 import armorRoutes from "../routes/armorRoutes";
 import moduleRoutes from '../routes/moduleRoutes';
 import weaponRoutes from "../routes/weaponRoutes";
+import moduleRoutesExt from "../external-api/modulesRoutes";
 
 dotenv.config();
 
@@ -22,11 +25,20 @@ server.register(cors, {
 	origin: '*', // Allow all origins (update for production)
 	methods: ['GET', 'POST', 'PUT', 'DELETE']
 });
+
+// Register fastify-static to serve static files
+server.register(fastifyStatic, {
+	root: path.join(process.cwd(), 'public'), // Path to the directory containing your static files
+	prefix: '/', // Serve files under the root URL
+});
+
 // Root route
 
 server.get('/', async (request, reply) => {
-	return { message: 'Welcome to Knight TTRPG' };
+	return reply.sendFile('index.html');
 });
+
+server.register(moduleRoutesExt, { prefix: '/external-api'})
 
 server.register(characterRoutes, { prefix: '/api' });
 server.register(weaponRoutes, { prefix: '/api' });
