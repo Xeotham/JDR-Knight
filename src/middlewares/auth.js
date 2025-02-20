@@ -8,30 +8,41 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var _a, _b;
-(_a = document.getElementById("login-btn")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => loadPage("login"));
-(_b = document.getElementById("signup-btn")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => loadPage("signup"));
+var _a;
+(_a = document.getElementById("idle")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => loadPage("idle"));
 function loadPage(page) {
     return __awaiter(this, void 0, void 0, function* () {
-        var _a, _b;
+        var _a, _b, _c, _d, _e;
         const content = document.getElementById("content");
         if (page === "login") {
             content.innerHTML = `
-            <h2>Login</h2>
-            <input id="login-username" type="text" placeholder="Username" />
-            <input id="login-password" type="password" placeholder="Password" />
-            <button id="login-submit">Login</button>
+        <button id="signup-btn">Signup</button>
+        <h2>Login</h2>
+        <input id="login-username" type="text" placeholder="Username" />
+        <input id="login-password" type="password" placeholder="Password" />
+        <button id="login-submit">Login</button>
         `;
-            (_a = document.getElementById("login-submit")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", login);
+            (_a = document.getElementById("signup-btn")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => loadPage("signup"));
+            (_b = document.getElementById("login-submit")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", login);
         }
         else if (page === "signup") {
             content.innerHTML = `
-            <h2>Signup</h2>
-            <input id="signup-username" type="text" placeholder="Username" />
-            <input id="signup-password" type="password" placeholder="Password" />
-            <button id="signup-submit">Signup</button>
+        <button id="login-btn">Login</button>
+        <h2>Signup</h2>
+        <input id="signup-username" type="text" placeholder="Username" />
+        <input id="signup-password" type="password" placeholder="Password" />
+        <button id="signup-submit">Signup</button>
         `;
-            (_b = document.getElementById("signup-submit")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", signup);
+            (_c = document.getElementById("login-btn")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => loadPage("login"));
+            (_d = document.getElementById("signup-submit")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", signup);
+        }
+        else if (page === "idle") {
+            const username = localStorage.getItem("username");
+            content.innerHTML = `
+        <h2>Welcome, ${username}!</h2>
+        <button id="logout-btn">Logout</button>
+        `;
+            (_e = document.getElementById("logout-btn")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", logout);
         }
     });
 }
@@ -73,7 +84,9 @@ function login() {
             if (response.ok) {
                 const data = yield response.json();
                 localStorage.setItem("token", data.token); // Store the JWT token in localStorage
-                alert("Login successful!");
+                localStorage.setItem("username", username);
+                alert("Login successful!"); //switch to idle page
+                loadPage('idle');
             }
             else {
                 const errorData = yield response.json();
@@ -85,6 +98,11 @@ function login() {
             alert("Error while logging in. Please try again.");
         }
     });
+}
+function logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    loadPage("login");
 }
 // Initialize the page by loading the login form
 loadPage("login");

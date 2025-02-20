@@ -42,7 +42,6 @@ server.get('/', async (request, reply) => {
 
 server.get('/auth.js', async (request, reply) => {
     const filePath = path.join(__dirname, '../middlewares/auth.js');
-
     try {
         const fileStream = fs.createReadStream(filePath);
         reply.header('Content-Type', 'application/javascript');

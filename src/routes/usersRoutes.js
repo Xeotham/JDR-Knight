@@ -32,6 +32,7 @@ function usersRoutes(server) {
                 reply.code(201).send({ message: 'User registered successfully' });
             }
             catch (err) {
+                console.error("Signup error:", err);
                 reply.code(500).send({ error: 'Server error', details: err });
             }
         }));
@@ -41,12 +42,12 @@ function usersRoutes(server) {
                 // Check if user exists
                 const user = yield Users_1.Users.findOne({ username });
                 if (!user) {
-                    return reply.code(401).send({ error: 'Invalid email or password' });
+                    return reply.code(401).send({ error: 'Invalid username or password' });
                 }
                 // Compare passwords
                 const isMatch = yield bcrypt_1.default.compare(password, user.password);
                 if (!isMatch) {
-                    return reply.code(401).send({ error: 'Invalid email or password' });
+                    return reply.code(401).send({ error: 'Invalid username or password' });
                 }
                 // Generate JWT Token
                 const token = jsonwebtoken_1.default.sign({ userId: user._id, email: user.username }, SECRET_KEY, { expiresIn: '1h' });
