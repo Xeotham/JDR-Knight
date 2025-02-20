@@ -23,6 +23,7 @@ const armorRoutes_1 = __importDefault(require("../routes/armorRoutes"));
 const moduleRoutes_1 = __importDefault(require("../routes/moduleRoutes"));
 const weaponRoutes_1 = __importDefault(require("../routes/weaponRoutes"));
 const modulesRoutes_1 = __importDefault(require("../external-api/modulesRoutes"));
+const usersRoutes_1 = __importDefault(require("../routes/usersRoutes"));
 dotenv_1.default.config();
 const server = (0, fastify_1.default)({ logger: true });
 // Connect to MongoDB
@@ -48,6 +49,7 @@ server.register(characterRoutes_1.default, { prefix: '/api' });
 server.register(weaponRoutes_1.default, { prefix: '/api' });
 server.register(armorRoutes_1.default, { prefix: '/api' });
 server.register(moduleRoutes_1.default, { prefix: '/api' });
+server.register(usersRoutes_1.default, { prefix: '/api' });
 // Start the server
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {

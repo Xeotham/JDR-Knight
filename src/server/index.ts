@@ -10,6 +10,8 @@ import armorRoutes from "../routes/armorRoutes";
 import moduleRoutes from '../routes/moduleRoutes';
 import weaponRoutes from "../routes/weaponRoutes";
 import moduleRoutesExt from "../external-api/modulesRoutes";
+import usersRoutes from '../routes/usersRoutes';
+import { request } from 'http';
 
 dotenv.config();
 
@@ -39,11 +41,11 @@ server.get('/', async (request, reply) => {
 });
 
 server.register(moduleRoutesExt, { prefix: '/external-api'})
-
-server.register(characterRoutes, { prefix: '/api' });
-server.register(weaponRoutes, { prefix: '/api' });
-server.register(armorRoutes, { prefix: '/api' });
-server.register(moduleRoutes, { prefix: '/api' });
+server.register(characterRoutes, { prefix: '/' });
+server.register(weaponRoutes, { prefix: '/' });
+server.register(armorRoutes, { prefix: '/' });
+server.register(moduleRoutes, { prefix: '/' });
+server.register(usersRoutes, {prefix : '/'});	
 
 // Start the server
 const start = async () => {
