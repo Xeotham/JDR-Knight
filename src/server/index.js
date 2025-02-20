@@ -17,6 +17,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const cors_1 = __importDefault(require("@fastify/cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const path_1 = __importDefault(require("path"));
+const fs_1 = __importDefault(require("fs"));
 const static_1 = __importDefault(require("@fastify/static"));
 const characterRoutes_1 = __importDefault(require("../routes/characterRoutes"));
 const armorRoutes_1 = __importDefault(require("../routes/armorRoutes"));
@@ -44,12 +45,23 @@ server.register(static_1.default, {
 server.get('/', (request, reply) => __awaiter(void 0, void 0, void 0, function* () {
     return reply.sendFile('index.html');
 }));
+server.get('/auth.js', (request, reply) => __awaiter(void 0, void 0, void 0, function* () {
+    const filePath = path_1.default.join(__dirname, '../middlewares/auth.js');
+    try {
+        const fileStream = fs_1.default.createReadStream(filePath);
+        reply.header('Content-Type', 'application/javascript');
+        return reply.send(fileStream);
+    }
+    catch (err) {
+        reply.code(500).send({ error: 'Cannot load auth.js' });
+    }
+}));
 server.register(modulesRoutes_1.default, { prefix: '/external-api' });
-server.register(characterRoutes_1.default, { prefix: '/api' });
-server.register(weaponRoutes_1.default, { prefix: '/api' });
-server.register(armorRoutes_1.default, { prefix: '/api' });
-server.register(moduleRoutes_1.default, { prefix: '/api' });
-server.register(usersRoutes_1.default, { prefix: '/api' });
+server.register(characterRoutes_1.default, { prefix: '/' });
+server.register(weaponRoutes_1.default, { prefix: '/' });
+server.register(armorRoutes_1.default, { prefix: '/' });
+server.register(moduleRoutes_1.default, { prefix: '/' });
+server.register(usersRoutes_1.default, { prefix: '/' });
 // Start the server
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {

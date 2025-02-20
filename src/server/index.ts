@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from '@fastify/cors';
 import dotenv from 'dotenv';
 import path	from 'path';
+import fs from 'fs';
 import fastifyStatic from '@fastify/static';
 
 import characterRoutes from "../routes/characterRoutes";
@@ -11,7 +12,6 @@ import moduleRoutes from '../routes/moduleRoutes';
 import weaponRoutes from "../routes/weaponRoutes";
 import moduleRoutesExt from "../external-api/modulesRoutes";
 import usersRoutes from '../routes/usersRoutes';
-import { request } from 'http';
 
 dotenv.config();
 
@@ -38,6 +38,18 @@ server.register(fastifyStatic, {
 
 server.get('/', async (request, reply) => {
 	return reply.sendFile('index.html');
+});
+
+server.get('/auth.js', async (request, reply) => {
+    const filePath = path.join(__dirname, '../middlewares/auth.js');
+
+    try {
+        const fileStream = fs.createReadStream(filePath);
+        reply.header('Content-Type', 'application/javascript');
+        return reply.send(fileStream);
+    } catch (err) {
+        reply.code(500).send({ error: 'Cannot load auth.js' });
+    }
 });
 
 server.register(moduleRoutesExt, { prefix: '/external-api'})
