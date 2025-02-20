@@ -81,7 +81,7 @@ app.get('/favicon.ico', (req, res) => res.status(204).end());
 app.get('/api/external-data', (req, res) => {
   const options = {
     hostname: 'knight-jdr-systeme.fr',
-    path: '/api/great-deed',
+    path: '/api',
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
